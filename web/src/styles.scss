@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* lobster-two-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lobster Two';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/lobster-two/lobster-two-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lobster-two-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./assets/fonts/lobster-two/lobster-two-v20-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lobster-two-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lobster Two';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/lobster-two/lobster-two-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lobster-two-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./assets/fonts/lobster-two/lobster-two-v20-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+$full-height: 100%;
+$full-width: 100%;
+$no-margin: 0;
+$no-padding: 0;
+$app-bg-color: #005270;
+$app-bg-image: url(./assets/images/background/mirrored-squares.png);
+$title-font-family: 'Lobster Two';
+
+html, body{
+  height: $full-height;
+  width: $full-width;
+  margin: $no-margin;
+  padding: $no-padding;
+  overflow: hidden;
+}
+
+body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $app-bg-color;
+  background-image: $app-bg-image;
+}
+
+.title{
+  font-family: $title-font-family;
+  color: #fcfcfc;
+}

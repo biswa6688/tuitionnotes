@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="inner-container">
+    <div class="title-row">
+      <h3 class="title">Tuition Notes</h3>
+    </div>
+    <div class="search-row">
+      <div class="searchbar">
+        <p-autoComplete [(ngModel)]="txtSearch" [suggestions]="searchResults" field="label" [minLength]="1"
+          placeholder="Type to search..." (completeMethod)="OnSearch($event)">
+          <ng-template let-item pTemplate="item">
+            <div>
+                <div>{{item.label}}</div>
+            </div>
+          </ng-template>
+        </p-autoComplete>
+        <i class="icon-search"></i>
+      </div>
+    </div>
+    <div class="programs-row">
+      <button type="button" class="program">
+        <i class="icon-javascript"></i>
+      </button>
+      <button type="button" class="program">
+        <i class="icon-typescript"></i>
+      </button>
+      <button type="button" class="program">
+        <i class="icon-c"></i>
+      </button>
+      <button type="button" class="program">
+        <i class="icon-csharp"></i>
+      </button>
+      <button type="button" class="program">
+        <i class="icon-html5"></i>
+      </button>
+      <button type="button" class="program">
+        <i class="icon-css3"></i>
+      </button>
+    </div>
+  </div>
+</div>

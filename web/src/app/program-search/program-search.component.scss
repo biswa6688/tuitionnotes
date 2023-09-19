@@ -1,0 +1,203 @@
+$full-height: 100%;
+$full-width: 100%;
+$no-margin: 0;
+$no-padding: 0;
+
+.container {
+  height: $full-height;
+  width: $full-width;
+  margin: $no-margin;
+  padding: $no-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  .inner-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .title {
+        font-size: 4em;
+        margin: $no-margin;
+        padding: $no-padding;
+      }
+    }
+
+    .search-row {
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px #003d53;
+      border: 5px solid transparent;
+      width: 100%;
+
+      .searchbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        // padding: 5px 15px 5px 10px;
+        position: relative;
+        background: #ffffff;
+        border-radius: 2px;
+
+        ::ng-deep p-autocomplete {
+          flex: 1;
+
+          span {
+            width: 100%;
+
+            input[type=text] {
+              padding: 10px 40px 10px 10px;
+              font-size: 15px;
+              border: none;
+              background: none;
+              // min-width: 600px;
+              flex: 1;
+              outline: none;
+              color: #005270;
+            }
+
+            input[type=text]::placeholder {
+              /* Chrome, Firefox, Opera, Safari 10.1+ */
+              color: #dfdfdf;
+              opacity: 1;
+              /* Firefox */
+            }
+
+            input[type=text]:-ms-input-placeholder {
+              /* Internet Explorer 10-11 */
+              color: #dfdfdf;
+            }
+
+            input[type=text]::-ms-input-placeholder {
+              /* Microsoft Edge */
+              color: #dfdfdf;
+            }
+
+          }
+        }
+
+        i.icon-search {
+          font-size: 20px;
+          color: #005270;
+          position: absolute;
+          right: 10px;
+        }
+      }
+
+      &:focus-within {
+        border-radius: 5px;
+        // border: 5px solid #0080af;
+
+        .searchbar {
+
+          input[type=text] {
+            color: #0080af;
+          }
+
+          i.icon-search {
+            color: #0080af;
+          }
+        }
+      }
+
+    }
+
+    .programs-row {
+      padding-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+
+      button.program {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        display: block;
+        text-align: center;
+        border-radius: 50%;
+        padding: 6px;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(0deg, #ddd, #fff);
+        transition: .5s;
+        cursor: pointer;
+
+        i {
+          widht: 100%;
+          height: 100%;
+          display: block;
+          background: linear-gradient(0deg, #fff, #ddd);
+          border-radius: 50%;
+          line-height: calc(60px - 12px);
+          font-size: 24px;
+          color: #0080af;
+          transition: .5s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 30px;
+
+          &.icon-javascript:hover {
+            color: #F7DF1E;
+          }
+
+          &.icon-typescript:hover {
+            color: #3178C6;
+          }
+
+          &.icon-c:hover {
+            color: #A8B9CC;
+          }
+
+          &.icon-csharp:hover {
+            color: #239120;
+          }
+
+          &.icon-html5:hover {
+            color: #E34F26;
+          }
+
+          &.icon-css3:hover {
+            color: #1572B6;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inner-container {
+    width: 60% !important;
+  }
+
+  // .search-row {
+  //   min-width: 45%;
+  // }
+
+  // .programs-row {
+  //   min-width: 45%;
+  // }
+}
